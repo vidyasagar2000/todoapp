@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+const PORT = process.env.PORT || 3000;
 // const date = require(__dirname + "/date.js");
 
 const app = express();
@@ -141,6 +142,6 @@ app.post("/work", function (req, res) {
   res.redirect("/work");
 });
 
-app.listen(3000, function () {
+app.listen(PORT, () => {
   console.log("Server is running on port 3000");
 });
